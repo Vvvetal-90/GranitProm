@@ -1,0 +1,333 @@
+@import "bourbon"
+@import "sass/vars"
+@import "sass/base"
+
+//First screen styles
+body
+	background: #ccc url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAABcBAMAAAAopn4wAAAAGFBMVEX09PT29vb4+Pjx8fH7+/vv7+/t7e3+/v7logVOAAAFy0lEQVRIx4SUza7TQAyFj+0JbO2ZhrUnafeepBe2yS2wntILayrEE/D+Ej8SEgIEfoFP9vmOIbnTVSbNDc1Kk5I9Kqedp6TfhhhdX2qNyY2uqlVX5xov8K7OFJRPKxU8rEZTpnvIolETIWeHsRuysj9uATS714kUtW1CAdeF9KNjPfcVq5KAhoZPQTg/C/nG+ISNxZM+I3SS5xGPeFB9Vudwg7VQzdfyAGXUwXJQ3lpBhvVhpwkn4TZ8oKdIlQrtyn5VY80gIsUE3HY2A8Eu7WDu39iwrT8cZ7QD85qd1TfWjtCP+aqrbRiIKLRecGQNQ0a+JcnTs9TygcjwuviMiBEAZCAMaJsaxDYxRNUDlSc3Ku/NGCogXEjBrXDcWKrTiCfNzj1mff8RGnmZVZ/GMTumPbP5tQSA42E7UzWg4jRpCPhIzroasJ0EVamMASNakfaFQ4Q6ErUjCP0yv++OnhBEeSl4XLCRTFis7MAARAHj1l2TNFI0AOD9tWzZlEaexZjyMKCH3xinzS9w6BV7AWs5Nu+l8T0Ghbn/zDRPBCg7TeH5TjMsmxqfnUKuwi8ShA85SKwxzVhGSpygMSUBN+VdBbgx7bWg0MgEGAKawoDZYh7CF+wXo8WTW2Nh1vPymZo+IskwHJ8y8BKb7vxF22GiHkKEjsWG51oazI75yYEy2/LPuwLainoOqV0330jYt8BsOBpWQwH0zY0OnIsCK6vOtG4jyZ0LT6SjEWN9NM6npK6ooBghxA9tfd38YBhhwOOF4zoFGcRQ/Hm/0jB8w/HPFUAoiciiA1Brx3FU2PmY8884UJkVOmh9N5/i1aU5kdiA15MGcXHZoOuLf1cX438N+XewH2XDd5QbPK31HH97BKh6NwV6kx93Vmaal6uusqQXY1ININ8NOngF+V91AlUIvlWjT5kVxR2Pau86BJg2Z3VoPDMfbHgzd5pYUn1LOxEppFZW5wA4/zs8FJ6hNhXSWuU6oqG0bsd5Ti/M0E4A09LQlvTMs5io1/BN6Rd78bcnK/NUEqiOmguhQNBAvi03p5JZbKUW52RdaisTJfzirOkqdq66WFF+YCKgQPEb/s/yIOo+/9Pmr4WWza4TMQxGj5OZrp3MdO/M9MLWSel+Wi77aQt7EE+AeH8JiR+Vn1u6jmTF8vHxx+ZREdpS/L/T45oSGkZp/k5kfqN7rEe7OD55IV51IOcHBqGdr7tFdKwDHVkL2knwrevRZEpyilzIistzfBeKFaQFuiLbJ3DCLlCI20WjyduSiRnZL0b64MlUiPltb3BnS27oos6wS1m+TLQjEMWKD8sVmYb6fFGHniWiaS4uix5QF0klbDMz3SIHeIRpQXVG4SJJrCfI1E+n0F+GA6l2neqRstGzxGqfJA7SXuiMmyru2I4h1UWTbFu9QxtX3ezRuHymxrbxDmsc+ag96l9jNz8R+ZQ56/vLgWzmp/HjqKoJWtYSmGEY5lzNYo4oJHSWnhJCyz1pIAqewyBveieX/fiuxH9vJ6leEdXBVUYLLU0yRdywn3bid3XaLPreURDV3DLen4GxCElMuhr2FvJKrfoBmOa0gC3cWEp7XbFWLgSW1EOsSKfMW12ZpDh5w9BiMLtGgQpZoqLwUV1Owsf5fYh5T53/7v9G5B07kymxKl1YPaSXWgeQXBJpO8jh+cLO+SR/rMjt4gVGE/XtX8QQJa/uRh+4vLjFAC1Twl3z8itDjBJXiWjKWs4WnGeGVcJglCqGVs158BWi2c74dDnYL1nDShTH+kMQlv2PmdtcJ0roKD00exv8ELV63oz2QsX/juS5hiAcFquzx1xrq3MOVHMBUQmua1CbOR3LhPTaJadIe5t72eurgTOSA3pVHv8DnuKupJzn5Q5ux6cTkqLX4ZRiSZV5NVXEf8XSxynnoWCUW2Ruq5pxbGnbVGg+pLjoUQmdoL3bmJOLp9UU+SORktxQex1cTHQnsdWkA9P3p8FZ+Aa4xR/eTaJV4AAAAABJRU5ErkJggg==')
+.container
+	box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.2);
+.header
+	background-color: #fff
+	border-top: 6px solid $hover-color
+	top: 0
+	right: 0
+	left: 0
+	ol,ul
+		margin: 0
+		padding: 0
+		list-style: none
+		li
+			margin: 0
+			padding: 0
+	&-top
+		&-logo-info
+			float: left
+			.logo,.siteTitle
+				float: left
+		&-conect-info
+			float: right
+.header-top
+	
+.siteTitle
+	font-size: $info-size
+	color: $font-color
+	border-left: 1px solid #e8e8e8
+	padding: 5px 0 5px 20px
+	margin: 23px 5px
+.header-top-conect-info
+	font-size: $info-size
+	color: $font-color
+	line-height: 10px
+	margin: 8px 0
+	.phoneblock,.call-us
+		float: left
+	.phoneblock
+		margin-right: 10px
+.button
+	background-color: $hover-color
+	color: $light-color
+	border-radius: 2px
+	padding: 10px 15px
+	font-size: 13px
+	&:hover,&:active,&:focus
+		text-decoration: none
+		color: $light-color
+		background-color: $hover-color2
+.call-us
+	text-align: center
+	margin: 15px
+i.fa
+	margin: 0 6px
+//PopUp
+.modal_div
+	width: 300px
+	height: 300px
+	border-radius: 2px
+	border: 1px #000 solid
+	background: #fff
+	position: fixed
+	top: 45%
+	left: 50%
+	margin-top: -150px
+	margin-left: -150px
+	display: none
+	opacity: 0
+	z-index: 5
+	padding: 20px 10px
+.modal_div
+	.modal_close
+		width: 20px
+		height: 20px
+		font-size: 20px
+		position: absolute
+		top: 8px
+		right: 12px
+		cursor: pointer
+		display: block
+		&:hover,&:active,&:focus
+			color: #000
+#overlay 
+	z-index: 3
+	position: fixed
+	background-color: #000
+	opacity: 0.8
+	-moz-opacity: 0.8
+	filter: alpha(opacity=80)
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	cursor: pointer
+	display: none
+
+@media only screen and (max-width : 768px)
+	.navbar-button
+
+	.menu-buttom
+		background-color: $background-color
+		color: #fff
+		font-size: 30px
+		width: 100%
+		display: inline-block
+		text-align: center
+		&:hover,&:active,&:focus
+			color: $hover-color
+	.navbar
+		display: none
+		.menu-item
+			a
+				padding: 4px	10px	
+				display: inline-block
+				width: 100%
+				color: $hover-color
+				border: 1px solid #e6e6e6
+				border-top: none
+				&:hover,&:active,&:focus
+					text-decoration: none
+					background-color: #f5f5f5
+		.menu-item.current-menu-item
+			a
+				background-color: #ccc
+	//End Mobile Menu
+
+@media only screen and (min-width : 769px)
+	.menu-buttom
+		display: none
+	.navbar
+		background-color: $background-color
+		position: relative
+		margin: 0 -25px
+	.navbar::before
+		content: ""
+		position: absolute
+		bottom: -9px
+		border-color:  transparent #888 transparent transparent
+		border-width: 0px 9px 9px 0px
+		border-style: solid
+		opacity: 0.58
+	.navbar::after
+		content: ""
+		position: absolute
+		bottom: -9px
+		right: 0
+		border-color: #888 transparent transparent transparent;
+		border-width: 9px 9px 0 0;
+		border-style: solid
+		opacity: 0.58
+	ul.nav-menu
+		overflow: hidden
+		li.menu-item
+			float: left
+			&:hover,&:active,&:focus
+					background-color: #707070;
+					border-left: none;
+			a
+				color: #fff
+				font-weight: 400
+				font-size: 13px
+				padding: 15px 20px 16px 20px
+				display: block
+				border-right: 1px solid #666
+				&:hover,&:active,&:focus
+					text-decoration: none
+					border-right: 1px solid #707070
+		li.current-menu-item
+			&:hover,&:active,&:focus
+				background-color: #169fe6
+			a
+				border: none
+				&:hover,&:active,&:focus
+					border-right: none
+
+	li.menu-item-has-children
+		//----------------hover submenu
+		&:hover
+			ul.sub-menu
+				display: block
+				transition-property: all;
+				transition-duration: .5s;
+				transition-timing-function: ease-in-out;
+				transition-delay: 0s;
+				ul.sub-menu
+					display: none
+	ul.sub-menu
+		display: none
+		position: absolute
+		top: 51px
+		li.menu-item-has-children
+			position: relative
+			//-------------hover submenu
+			&:hover
+				ul.sub-menu
+					display: block
+					transition-property: all;
+					transition-duration: .5s;
+					transition-timing-function: ease-in-out;
+					transition-delay: 0s;
+		ul.sub-menu
+			display: none
+			position: absolute
+			top: 0px
+			left: 100%
+			width: 100%
+		li.menu-item
+			float: none
+			a
+				background-color: #FFF
+				color: #777
+				font-size: 12px
+				padding: 9px 12px
+				border-top: 1px solid #e6e6e6
+				&:hover,&:active,&:focus
+					background-color: #f5f5f5
+		li:last-child>
+			a
+				border-bottom: 1px solid #707070
+		li:first-child>
+			a
+				border-top: 1px solid #707070
+	.nav-menu
+		.current-menu-item
+			background-color: #169fe6
+			border-right: 1px solid #169fe6
+	ul.sub-menu
+		li.current-menu-item>
+			a
+				color: #169fe6
+		li.current-menu-item
+			background-color: #FFF
+			border-right: none
+			&:hover,&:active,&:focus
+				background-color: #FFF
+	ul.nav-menu>
+		li.current-menu-ancestor
+			background-color: #169fe6
+			border-right: 1px solid #169fe6
+			&:hover,&:active,&:focus
+				background-color: #169fe6
+		li.current-menu-ancestor>
+			a
+				border: none
+				&:hover,&:active,&:focus
+					border-right: none
+	ul.sub-menu
+		li.menu-item
+			a
+				border-right: 1px solid #707070
+				border-left: 1px solid #707070
+				&:hover,&:active,&:focus
+					border-right: 1px solid #707070
+
+	//End Menu
+	.header
+		position: fixed
+	.main-content
+		margin-top: 134px
+//--------------------------------
+.main-content
+	background-color: #fff
+.footer
+
+.footer-widget
+	color: $font-widgettext-color
+	font-size: 12px
+	.container
+		padding: 30px 15px
+		background-color: $background-color
+	p
+		margin: 0 0 15px 0;
+		line-height: 18px
+	strong
+		color: #fff
+		font-weight: 600
+.widget-title
+	padding: 0
+	margin: 0 0 15px 0
+	font-size: 14px
+	color: #fff
+	line-height: 30px
+	font-weight: 600;
+.footer-copyright
+	color: $hover-color2
+	font-size: $info-size
+	line-height: 21px
+	a
+		color: $link-footer-color
+		&:hover,&:active,&:focus
+	.container
+		padding: 15px 0
+		background-color: $background-bottom-footer
+.copyright
+	float: left
+	margin: 0 15px
+	p
+		margin: 0
+.counters
+	float: right
+	margin: 0 15px
+//top botton
+.go-top
+	position: fixed
+	bottom: 2em
+	right: 2em;
+	text-decoration: none
+	background-color: rgba(0,0,0,.3)
+	font-size: 16px
+	padding: 0
+	z-index: 9999;
+	height: 48px
+	width: 48px
+	border-radius: 2px
+	display: none
+	&:hover,&:active,&:focus
+		background-color: rgba(0,0,0,.6)
+	a
+		height: 48px
+		width: 48px
+		font-size: 20px
+		color: #dfdfdf
+		text-align: center
+		line-height: 48px
+		text-decoration: none
+		display: block
