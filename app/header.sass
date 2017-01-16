@@ -23,18 +23,22 @@ body
 	&-top
 		&-logo-info
 			float: left
-			.logo,.siteTitle
+			.logo,.site-title
 				float: left
 		&-conect-info
 			float: right
-.header-top
-	
-.siteTitle
+p
+	margin: 0 0 1em
+.content-start
+	margin-top: 1em
+.site-title
 	font-size: $info-size
 	color: $font-color
 	border-left: 1px solid #e8e8e8
 	padding: 5px 0 5px 20px
-	margin: 23px 5px
+	margin: 24px 5px
+	a
+		color: $font-color
 .header-top-conect-info
 	font-size: $info-size
 	color: $font-color
@@ -44,6 +48,12 @@ body
 		float: left
 	.phoneblock
 		margin-right: 10px
+		p
+			margin: 1em 0
+.logo
+	margin: 4px 0
+	img
+		height: 70px
 .button
 	background-color: $hover-color
 	color: $light-color
@@ -126,7 +136,7 @@ i.fa
 				&:hover,&:active,&:focus
 					text-decoration: none
 					background-color: #f5f5f5
-		.menu-item.current-menu-item
+		.menu-item.current-menu-item>
 			a
 				background-color: #ccc
 	//End Mobile Menu
@@ -143,7 +153,7 @@ i.fa
 		position: absolute
 		bottom: -9px
 		border-color:  transparent #888 transparent transparent
-		border-width: 0px 9px 9px 0px
+		border-width: 0px 10px 9px 0px
 		border-style: solid
 		opacity: 0.58
 	.navbar::after
@@ -152,52 +162,37 @@ i.fa
 		bottom: -9px
 		right: 0
 		border-color: #888 transparent transparent transparent;
-		border-width: 9px 9px 0 0;
+		border-width: 9px 10px 0 0;
 		border-style: solid
 		opacity: 0.58
-	ul.nav-menu
-		overflow: hidden
-		li.menu-item
-			float: left
-			&:hover,&:active,&:focus
-					background-color: #707070;
-					border-left: none;
-			a
-				color: #fff
-				font-weight: 400
-				font-size: 13px
-				padding: 15px 20px 16px 20px
-				display: block
-				border-right: 1px solid #666
+	.navbar
+		ul.nav-menu
+			overflow: hidden
+			li.menu-item
+				float: left
 				&:hover,&:active,&:focus
-					text-decoration: none
-					border-right: 1px solid #707070
-		li.current-menu-item
-			&:hover,&:active,&:focus
-				background-color: #169fe6
-			a
-				border: none
+						background-color: #707070;
+						border-left: none;
+				a
+					color: #fff
+					font-weight: 400
+					font-size: 13px
+					padding: 15px 20px 16px 20px
+					display: block
+					border-right: 1px solid #666
+					&:hover,&:active,&:focus
+						text-decoration: none
+						border-right: 1px solid #707070
+			li.current-menu-item
 				&:hover,&:active,&:focus
-					border-right: none
+					background-color: #169fe6
+				a
+					border: none
+					&:hover,&:active,&:focus
+						border-right: none
 
-	li.menu-item-has-children
-		//----------------hover submenu
-		&:hover
-			ul.sub-menu
-				display: block
-				transition-property: all;
-				transition-duration: .5s;
-				transition-timing-function: ease-in-out;
-				transition-delay: 0s;
-				ul.sub-menu
-					display: none
-	ul.sub-menu
-		display: none
-		position: absolute
-		top: 51px
 		li.menu-item-has-children
-			position: relative
-			//-------------hover submenu
+			//----------------hover submenu
 			&:hover
 				ul.sub-menu
 					display: block
@@ -205,68 +200,89 @@ i.fa
 					transition-duration: .5s;
 					transition-timing-function: ease-in-out;
 					transition-delay: 0s;
+					ul.sub-menu
+						display: none
 		ul.sub-menu
 			display: none
 			position: absolute
-			top: 0px
-			left: 100%
-			width: 100%
-		li.menu-item
-			float: none
-			a
-				background-color: #FFF
-				color: #777
-				font-size: 12px
-				padding: 9px 12px
-				border-top: 1px solid #e6e6e6
-				&:hover,&:active,&:focus
-					background-color: #f5f5f5
-		li:last-child>
-			a
-				border-bottom: 1px solid #707070
-		li:first-child>
-			a
-				border-top: 1px solid #707070
-	.nav-menu
-		.current-menu-item
-			background-color: #169fe6
-			border-right: 1px solid #169fe6
-	ul.sub-menu
-		li.current-menu-item>
-			a
-				color: #169fe6
-		li.current-menu-item
-			background-color: #FFF
-			border-right: none
-			&:hover,&:active,&:focus
-				background-color: #FFF
-	ul.nav-menu>
-		li.current-menu-ancestor
-			background-color: #169fe6
-			border-right: 1px solid #169fe6
-			&:hover,&:active,&:focus
+			top: 51px
+			li.menu-item-has-children
+				position: relative
+				//-------------hover submenu
+				&:hover
+					ul.sub-menu
+						display: block
+						transition-property: all;
+						transition-duration: .5s;
+						transition-timing-function: ease-in-out;
+						transition-delay: 0s;
+			ul.sub-menu
+				display: none
+				position: absolute
+				top: 0px
+				left: 100%
+				width: 100%
+			li.menu-item
+				float: none
+				a
+					background-color: #FFF
+					color: #777
+					font-size: 12px
+					padding: 9px 12px
+					border-top: 1px solid #e6e6e6
+					&:hover,&:active,&:focus
+						background-color: #f5f5f5
+			li:last-child>
+				a
+					border-bottom: 1px solid #707070
+			li:first-child>
+				a
+					border-top: 1px solid #707070
+		.nav-menu
+			.current-menu-item
 				background-color: #169fe6
-		li.current-menu-ancestor>
-			a
-				border: none
+				border-right: 1px solid #169fe6
+		ul.sub-menu
+			li.current-menu-item>
+				a
+					color: #169fe6
+			li.current-menu-item
+				background-color: #FFF
+				border-right: none
 				&:hover,&:active,&:focus
-					border-right: none
-	ul.sub-menu
-		li.menu-item
-			a
-				border-right: 1px solid #707070
-				border-left: 1px solid #707070
+					background-color: #FFF
+		ul.nav-menu>
+			li.current-menu-ancestor
+				background-color: #169fe6
+				border-right: 1px solid #169fe6
 				&:hover,&:active,&:focus
+					background-color: #169fe6
+			li.current-menu-ancestor>
+				a
+					border: none
+					&:hover,&:active,&:focus
+						border-right: none
+		ul.sub-menu
+			li.menu-item
+				a
 					border-right: 1px solid #707070
+					border-left: 1px solid #707070
+					&:hover,&:active,&:focus
+						border-right: 1px solid #707070
 
 	//End Menu
 	.header
 		position: fixed
 		z-index: 99
-	.main-content
+	.admin-bar .header
+		top: 32px
+	.site-content
 		margin-top: 134px
+@media only screen and (max-width : 600px)
+	.admin-bar #wpadminbar
+		position: fixed
 //--------------------------------
-.main-content
+.site-content
 	background-color: #fff
 .footer
 
