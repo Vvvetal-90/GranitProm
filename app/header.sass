@@ -60,15 +60,18 @@ p
 	background-size: cover
 	background-repeat: no-repeat
 .button_gp
-	background-color: $hover-color
-	color: $light-color
-	border-radius: 2px
-	padding: 10px 15px
-	font-size: 13px
-	&:hover,&:active,&:focus
-		text-decoration: none
+	a
+		background-color: $hover-color
 		color: $light-color
-		background-color: $hover-color2
+		border-radius: 2px
+		padding: 10px 15px
+		font-size: 13px
+		cursor: pointer
+		display: block
+		&:hover,&:active,&:focus
+			text-decoration: none
+			color: $light-color
+			background-color: $hover-color2
 .call-us
 	text-align: center
 	margin: 15px
