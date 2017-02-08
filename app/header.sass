@@ -41,6 +41,10 @@ body
 			float: right
 p
 	margin: 0 0 1em
+a
+	color: $hover-color
+	&:hover,&:active,&:focus
+		color: $hover-color
 .content-start
 	margin-top: 1em
 .site-title
@@ -71,19 +75,18 @@ p
 	display: block
 	background-size: cover
 	background-repeat: no-repeat
-.button_gp
-	a
-		background-color: $hover-color
+.button_gp a, a.button_gp
+	background-color: $hover-color
+	color: $light-color
+	border-radius: 2px
+	padding: 10px 15px
+	font-size: 13px
+	cursor: pointer
+	display: block
+	&:hover,&:active,&:focus
+		text-decoration: none
 		color: $light-color
-		border-radius: 2px
-		padding: 10px 15px
-		font-size: 13px
-		cursor: pointer
-		display: block
-		&:hover,&:active,&:focus
-			text-decoration: none
-			color: $light-color
-			background-color: $hover-color2
+		background-color: $hover-color2
 .call-us
 	text-align: center
 	margin: 15px
@@ -157,7 +160,7 @@ i.fa
 		display: none
 		.menu-item
 			a
-				padding: 4px	10px	
+				padding: 10px	
 				display: inline-block
 				width: 100%
 				color: $hover-color
@@ -237,7 +240,7 @@ i.fa
 		ul.sub-menu
 			display: none
 			position: absolute
-			top: 51px
+			top: 49px
 			li.menu-item-has-children
 				position: relative
 				//-------------hover submenu
@@ -309,7 +312,7 @@ i.fa
 	.admin-bar .header
 		top: 32px
 	.site-content
-		padding-top: 137px
+		padding-top: 135px
 @media only screen and (max-width : 460px)
 	.header-top-logo-info,.header-top-logo-info .logo,.header-top-conect-info
 		float: none
@@ -330,6 +333,10 @@ i.fa
 //--------------------------------
 .site-content
 	background-color: #fff
+	overflow: hidden
+	img
+		width: 100%
+		height: auto
 .footer
 
 .footer-widget
